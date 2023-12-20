@@ -2,6 +2,7 @@
         <head>
         <title>cmsite</title>
         <meta charset="utf-8">
+<meta property="head" content="H1">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700,900" rel="stylesheet">
         <link rel="stylesheet" href="./../cmsimde/static/chimper/fonts/icomoon/style.css">
@@ -141,9 +142,360 @@ img.add_border {
           </div>
           
         </header>
-    <div id="tipue_search_content"> <a href='5w.html'>Next</a> >> 5w<br /><h1>About</h1>
-<p><a href="https://github.com/mdecycu/cmsite"> https://github.com/mdecycu/cmsite </a></p>
-<br /> <a href='5w.html'>Next</a> >> 5w</div>
+    <div id="tipue_search_content">ANSIC << <a href='ANSIC.html'>Previous</a> <a href='C.EX2.html'>Next</a> >> C.EX2<br /><h1>C.EX1</h1>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">#include &lt;stdio.h&gt;
+/* 讀取並顯示一個字符 */
+int main () {
+ char c;
+ printf("輸入字符: ");
+ c = getchar(); /* 讀取輸入的字符 */
+ printf("輸入的字符為: ");
+ putchar(c); /* 顯示輸入的字符 */
+ return(0);
+}
+</pre>
+<p><img alt="" height="225" src="./../images/螢幕擷取畫面 2023-12-21 024909.png" width="400"/></p>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">#define _CRT_SECURE_NO_WARNINGS  // 用於禁用scanf的安全性警告
+#include&lt;stdio.h&gt;
+
+int main()
+{
+    int this_is_a_number1, this_is_a_number2, total;
+    printf("請輸入一個整數：\n ");
+    scanf("%d", &amp;this_is_a_number1);  // 讀取輸入的數字
+    printf("你輸入了 %d\n", this_is_a_number1);
+    
+    printf("請輸入另一個整數：\n");
+    scanf("%d", &amp;this_is_a_number2);  // 讀取輸入的數字
+    printf("你輸入了 %d\n", this_is_a_number2);
+    
+    total = this_is_a_number1 + this_is_a_number2;  // 將兩個數字相加
+    printf("總和為 %d\n", total);
+    
+    return 0;
+}
+</pre>
+<p><img alt="" height="225" src="./../images/螢幕擷取畫面 2023-12-21 025344.png" width="400"/></p>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">#include &lt;stdio.h&gt; /* 展示使用 goto 语句 */
+int main()
+{
+    int i, testvalue;
+    testvalue = 2;
+    for (i = 0; i &lt; 10; i++)
+    {
+        if (testvalue == 2)
+            goto error;
+    }
+    printf("正常退出循环\n");
+error:
+    printf("testvalue 是 %d\n", testvalue);
+    return 0;
+}
+</pre>
+<p><img alt="" height="225" src="./../images/螢幕擷取畫面 2023-12-21 030617.png" width="400"/></p>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">#define _CRT_SECURE_NO_WARNINGS
+#include&lt;stdio.h&gt;
+
+/* 2D數組示例 */
+int main()
+{
+    int arr1[7][8]; /* 2D數組 */
+    int i, j, k, l;
+
+    printf("輸入行和列的數量（最多7行，最多8列） \n");
+    scanf("%d %d", &amp;k, &amp;l);
+
+    if (k &gt; 7 || l &gt; 8)
+    {
+        printf("錯誤 - 行的最大值為8，列的最大值為7 \n");
+    }
+    else
+    {
+        printf("輸入數組元素\n");
+
+        for (i = 0; i &lt; k; i++)
+        {
+            for (j = 0; j &lt; l; j++)
+            {
+                scanf("%d", &amp;arr1[i][j]);
+            }
+        }
+
+        printf("你的數組是 \n");
+
+        for (i = 0; i &lt; k; i++)
+        {
+            for (j = 0; j &lt; l; j++)
+            {
+                printf("%d ", arr1[i][j]);
+            }
+            printf("\n");
+        }
+    }
+
+    return 0;
+}
+</pre>
+<p><img alt="" height="225" src="./../images/螢幕擷取畫面 2023-12-21 031212.png" width="400"/></p>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">#define _CRT_SECURE_NO_WARNINGS
+#include &lt;stdio.h&gt;
+
+/* 使用 switch 語句對字符進行操作的示例 */
+int main()
+{
+    char this_is_a_character;
+
+    printf("請輸入字符 a, b, c, d 或 e：\n ");
+    scanf("%c", &amp;this_is_a_character);
+
+    switch (this_is_a_character)
+    {
+    case 'a':
+        printf("你輸入了 a");
+        break;
+    case 'b':
+        printf("你輸入了 b");
+        break;
+    case 'c':
+        printf("你輸入了 c");
+        break;
+    case 'd':
+        printf("你輸入了 d");
+        break;
+    case 'e':
+        printf("你輸入了 e");
+        break;
+    default:
+        printf("默認 ");
+    }
+
+    return 0;
+}
+</pre>
+<p><img alt="" height="225" src="./../images/螢幕擷取畫面 2023-12-21 031622.png" width="400"/></p>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">#define _CRT_SECURE_NO_WARNINGS
+#include &lt;stdio.h&gt;
+
+/* if、else if 和 else 操作的示例 */
+int main()
+{
+    int this_is_a_number;
+
+    printf("請輸入介於1和10之間的整數：\n ");
+    scanf("%d", &amp;this_is_a_number);
+
+    if (this_is_a_number &lt; 6)
+        printf("這個數小於6；\n ");
+
+    printf("請輸入介於10和20之間的整數：\n ");
+    scanf("%d", &amp;this_is_a_number);
+
+    if (this_is_a_number &lt; 16)
+    {
+        printf("這個數小於16\n ");
+    }
+    else if (this_is_a_number == 20)
+    {
+        printf("這個數是20\n ");
+    }
+    else
+    {
+        printf("這個數大於15\n ");
+    }
+
+    return 0;
+}
+</pre>
+<p><img alt="" height="225" src="./../images/螢幕擷取畫面 2023-12-21 031904.png" width="400"/></p>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">#define _CRT_SECURE_NO_WARNINGS
+#include&lt;stdio.h&gt;
+
+/* 顯示字符數組用法的程式 */
+int main()
+{
+    char arr2[10]; /* 定義包含10個字符的數組 */
+    int i;
+
+    printf("輸入10個字符 \n");
+
+    for (i = 0; i &lt; 10; i++)
+    {
+        scanf("%c", &amp;arr2[i]);
+    }
+
+    printf("你的10個字符是 \n");
+
+    for (i = 0; i &lt; 10; i++)
+    {
+        printf("%c ", arr2[i]);
+    }
+
+    printf("\n");
+
+    return 0;
+}
+</pre>
+<p><img alt="" height="225" src="./../images/螢幕擷取畫面 2023-12-21 032158.png" width="400"/></p>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">#define _CRT_SECURE_NO_WARNINGS
+#include&lt;stdio.h&gt;
+
+/* 二維數組測試的示例 */
+int main()
+{
+    int arr1[7][8];
+    int i, j, k, l;
+
+    printf("輸入行數和列數（最多7行最多8列）\n");
+    scanf("%d %d", &amp;k, &amp;l);
+
+    if (k &gt; 7 || l &gt; 8)
+    {
+        printf("錯誤 — 行數最多為8，列數最多為7 \n");
+    }
+    else
+    {
+        printf("輸入數組\n");
+
+        for (i = 0; i &lt; k; i++)
+        {
+            for (j = 0; j &lt; l; j++)
+            {
+                scanf("%d", &amp;arr1[i][j]);
+            }
+        }
+
+        printf("你的數組是 \n");
+
+        for (i = 0; i &lt; k; i++)
+        {
+            for (j = 0; j &lt; l; j++)
+            {
+                printf("%d ", arr1[i][j]);
+            }
+            printf("\n");
+        }
+    }
+
+    printf("數組的第一行\n");
+
+    for (j = 0; j &lt; l; j++)
+    {
+        printf("%d ", arr1[0][j]);
+    }
+
+    printf("\n");
+
+    return 0;
+}
+</pre>
+<p><img alt="" height="225" src="./../images/螢幕擷取畫面 2023-12-21 032640.png" width="400"/></p>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">#define _CRT_SECURE_NO_WARNINGS
+#include &lt;stdio.h&gt;
+
+/* 這段代碼演示了一個函數的作用 */
+/* 這個函數比較兩個數字的大小 */
+/* 用戶輸入三個數字，並得知它們的大小關係 */
+
+void myfunction(int a, int b); /* 函數的聲明和其參數 */
+
+int first, second, third;
+
+int main()
+{
+    printf("請輸入第一個整數：");
+    scanf("%d", &amp;first);
+
+    printf("請輸入第二個整數：");
+    scanf("%d", &amp;second);
+
+    printf("請輸入第三個整數：");
+    scanf("%d", &amp;third);
+
+    myfunction(first, second);
+    myfunction(first, third);
+    myfunction(second, third);
+
+    return 0;
+}
+
+void myfunction(int a, int b)
+{
+    /* 這個函數位於程序的 main{} 部分之外 */
+    /* 這個函數僅比較兩個參數 a 和 b，並說明哪個更大 */
+    if (a &gt; b)
+        printf("%d 大於 %d\n", a, b);
+    else if (a &lt; b)
+        printf("%d 大於 %d\n", b, a);
+    else
+        printf("%d 和 %d 相等\n", a, b);
+}
+</pre>
+<p><img alt="" height="225" src="./../images/螢幕擷取畫面 2023-12-21 033028.png" width="400"/></p>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">#define _CRT_SECURE_NO_WARNINGS
+#include&lt;stdio.h&gt;
+
+/* 函數的例子 */
+void printarow(int row, int cols, int arr[8][8]);
+
+int main()
+{
+    int arr1[8][8];
+    int i, j, rows, cols;
+
+    printf("輸入行數和列數（最多8行最多8列）\n");
+    scanf("%d %d", &amp;rows, &amp;cols);
+
+    if (rows &gt; 8 || cols &gt; 8)
+    {
+        printf("錯誤 — 行數最多為8，列數最多為8\n");
+    }
+    else
+    {
+        printf("輸入數組\n");
+
+        for (i = 0; i &lt; rows; i++)
+        {
+            for (j = 0; j &lt; cols; j++)
+            {
+                scanf("%d", &amp;arr1[i][j]);
+            }
+        }
+
+        printf("你的數組是 \n");
+
+        for (i = 0; i &lt; rows; i++)
+        {
+            for (j = 0; j &lt; cols; j++)
+            {
+                printf("%d ", arr1[i][j]);
+            }
+            printf("\n");
+        }
+    }
+
+    printarow(2, cols, arr1); /* 這將調用函數以打印第2行（假設你至少有2行） */
+    printf("\n");
+    printarow(1, cols, arr1); /* 這將調用函數以打印第1行 */
+    printf("\n");
+
+    return 0;
+}
+
+void printarow(int row, int cols, int arr[8][8])
+{
+    /* 這是一個函數，可以從程序的任何地方調用 */
+    /* 可以隨時多次調用 */
+    /* 如果你需要多次執行相同的操作，它可以節省你重復編寫相同代碼的工作 */
+    printf("第 %d 行是 ", row);
+
+    for (int j = 0; j &lt; cols; j++)
+    {
+        printf("%d ", arr[row - 1][j]);
+    }
+}
+</pre>
+<p><img alt="" height="225" src="./../images/螢幕擷取畫面 2023-12-21 033418.png" width="400"/></p>
+<br />ANSIC << <a href='ANSIC.html'>Previous</a> <a href='C.EX2.html'>Next</a> >> C.EX2</div>
         
     <!-- footer -->
       <div class="container">

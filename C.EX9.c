@@ -3,8 +3,6 @@
 /* This code demonstrates what a function does */
 /* The function here compares two numbers and says which is bigger */
 /* The user enters three numbers and gets told which is bigger than which !*/
-Chapter 1 Introduction to C
-25
  void myfunction(int a,int b); /* decaration of your function and its
 parameters */
  int first , second, third;
