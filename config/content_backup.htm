@@ -1053,7 +1053,31 @@ int main()
     return 0;   // 返回0以指示程序成功執行。
 }
 </pre>
-<p><img alt="" height="225" src="/images/螢幕擷取畫面 2023-12-21 020053.png" width="400"/></p>
+<p><img alt="" height="225" src="/images/螢幕擷取畫面 2023-12-21 020442.png" width="400"/></p>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">#include &lt;stdio.h&gt;     // 包含標準輸入/輸出頭文件。
+
+int tot_mins;  /* 指定的總分鐘數 */
+int hrs;          /* 小時數（待計算） */
+int mins;        /* 分鐘數（待計算） */
+
+const int MINaHOUR = 60;      /* 一小時的分鐘數 */
+
+char line_text[50];      /* 來自鍵盤的一行輸入 */
+
+int main() {
+    printf("輸入總分鐘數：");   // 提示用戶輸入總分鐘數。
+    fgets(line_text, sizeof(line_text), stdin);   // 從用戶讀取一行輸入，並將其存儲在 'line_text' 中。
+    sscanf(line_text, "%d", &amp;tot_mins);   // 將輸入轉換為整數，並將其存儲在 'tot_mins' 中。
+
+    hrs = (tot_mins / MINaHOUR);   // 計算小時數。
+    mins = (tot_mins % MINaHOUR);   // 計算剩餘分鐘數。
+
+    printf("%d 小時，%d 分鐘。\n", hrs, mins);   // 打印計算出的小時數和分鐘數。
+
+    return 0;   // 返回0以指示程序成功執行。
+}
+</pre>
+<p><img alt="" height="225" src="/images/螢幕擷取畫面 2023-12-21 020836.png" width="400"/></p>
 <pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">#include &lt;stdio.h&gt;     // 包含標準輸入/輸出頭文件。
 
 int hrs;          /* 指定的小時數 */
@@ -1080,7 +1104,102 @@ int main() {
     return 0;   // 返回0以指示程序成功執行。
 }
 </pre>
-<p></p><h1>Brython</h1>
+<p><img alt="" height="225" src="/images/螢幕擷取畫面 2023-12-21 021231.png" width="400"/></p>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">#include &lt;stdio.h&gt;    // 包含標準輸入/輸出頭文件。
+
+int main() {
+    char firstname[20], lastname[20];   // 声明字符數組來存儲名字和姓氏，每個數組的最大大小為20個字符。
+    int bir_year;   // 声明一個整數變量 'bir_year' 來存儲出生年份。
+
+    printf("輸入您的名字：");   // 提示用戶輸入他們的名字。
+    scanf("%s", firstname);   // 讀取並存儲用戶的輸入在 'firstname' 中。
+
+    printf("輸入您的姓氏：");   // 提示用戶輸入他們的姓氏。
+    scanf("%s", lastname);   // 讀取並存儲用戶的輸入在 'lastname' 中。
+
+    printf("輸入您的出生年份：");   // 提示用戶輸入他們的出生年份。
+    scanf("%d", &amp;bir_year);   // 讀取並存儲用戶的輸入在 'bir_year' 中。
+
+    printf("%s %s %d\n", firstname, lastname, bir_year);   // 打印名字、姓氏和出生年份。
+
+    return 0;   // 返回0以表示程序成功執行。
+}
+</pre>
+<p><img alt="" height="225" src="/images/螢幕擷取畫面 2023-12-21 021538.png" width="400"/></p>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">#include &lt;stdio.h&gt;     // 包含標準輸入/輸出頭文件。
+
+int num1, num2, num3;   /* 宣告三個變數 */
+int sum;                /* 用於存儲數字總和的變數 */
+char line_text[50];     /* 來自鍵盤的一行輸入 */ 
+
+int main() 
+{  
+    printf("輸入三個以逗號分隔的數字：");   // 提示用戶輸入三個以逗號分隔的數字。
+    fgets(line_text, sizeof(line_text), stdin);   // 從用戶讀取一行輸入，並將其存儲在 'line_text' 中。
+    sscanf(line_text, "%d, %d, %d", &amp;num1, &amp;num2, &amp;num3);   // 將輸入轉換為整數，並分別存儲在 'num1'、'num2' 和 'num3' 中。
+    sum = num1 + num2 + num3;   // 計算這三個數字的總和。
+    printf("三個數字的總和：%d\n", sum);   // 打印這三個數字的總和。  
+    return 0;   // 返回0以表示程序成功執行。  
+}  
+</pre>
+<p><img alt="" height="225" src="/images/螢幕擷取畫面 2023-12-21 021803.png" width="400"/></p>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">#include &lt;stdio.h&gt;    // 包含標準輸入/輸出頭文件。
+
+int main()  
+{  
+    int num1, num2;   // 宣告兩個整數變數 'num1' 和 'num2'。
+    int sum, sub, mult, mod;   // 宣告變數來存儲算術運算的結果。
+    float div;   // 宣告一個浮點變數 'div' 來存儲除法的結果。
+
+    /* 
+     * 從用戶讀取兩個以逗號分隔的數字 
+     */  
+    printf("輸入任意兩個以逗號分隔的數字：");   // 提示用戶輸入兩個以逗號分隔的數字。
+    scanf("%d,%d", &amp;num1, &amp;num2);   // 讀取並存儲用戶的輸入在 'num1' 和 'num2' 中。
+
+    /* 
+     * 執行所有算術運算 
+     */   
+    sum = num1 + num2;   // 計算 'num1' 和 'num2' 的和。
+    sub = num1 - num2;   // 計算 'num1' 和 'num2' 的差。
+    mult = num1 * num2;  // 計算 'num1' 和 'num2' 的積。
+    div = (float)num1 / num2;   // 計算 'num1' 除以 'num2' 的商，並將結果轉換為浮點數。
+    mod = num1 % num2;   // 計算 'num1' 和 'num2' 的餘數。
+
+    /* 
+     * 打印所有算術運算的結果 
+     */  
+    printf("給定數字的和：%d\n", sum);   // 打印和。
+    printf("給定數字的差：%d\n", sub);   // 打印差。
+    printf("給定數字的積：%d\n", mult);   // 打印積。
+    printf("給定數字的商：%f\n", div);   // 打印商。
+    printf("餘數 = %d\n", mod);   // 打印餘數。
+
+    return 0;   // 返回0以表示程序成功執行。   
+}
+</pre>
+<p><img alt="" height="225" src="/images/螢幕擷取畫面 2023-12-21 022031.png" width="400"/></p>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">#include &lt;stdio.h&gt;
+
+int main()  
+{  
+    int ang1, ang2, ang3; /* 定義三角形的三個角度  */
+
+    /* 從用戶讀取三角形的兩個角度，以逗號分隔*/  
+    printf("輸入三角形的兩個角度，以逗號分隔：");  
+    scanf("%d, %d", &amp;ang1, &amp;ang2);  
+
+    ang3 = 180 - (ang1 + ang2);  /* 計算第三個角度  */
+
+    printf("三角形的第三個角度為：%d\n", ang3);  
+
+    return 0;  
+}  
+</pre>
+<p><img alt="" height="225" src="/images/螢幕擷取畫面 2023-12-21 022031.png" width="400"/></p>
+<h1>C.EX</h1>
+<p></p>
+<h1>Brython</h1>
 <p><a href="https://en.wikipedia.org/wiki/Python_(programming_language)">https://en.wikipedia.org/wiki/Python_(programming_language)</a></p>
 <h4>Examples:</h4>
 <p style="padding-left: 30px;"><a href="https://gist.github.com/mdecycu/d9082d678096bd58378d6afe2c7fa05d">https://gist.github.com/mdecycu/d9082d678096bd58378d6afe2c7fa05d</a></p>
