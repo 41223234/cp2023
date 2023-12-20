@@ -1551,8 +1551,198 @@ void printarow(int row, int cols, int arr[8][8])
 </pre>
 <p><img alt="" height="225" src="/images/螢幕擷取畫面 2023-12-21 033418.png" width="400"/></p>
 <h1>C.EX2</h1>
-<p></p>
-<h1>Brython</h1>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">#define _CRT_SECURE_NO_WARNINGS
+#include &lt;stdio.h&gt;
+
+/* 除法計算兩個浮點數的商 */
+int main() {
+    float this_is_a_number1, this_is_a_number2, total;
+
+    // 提示用戶輸入一個數字
+    printf("請輸入一個數字：\n");
+    scanf("%f", &amp;this_is_a_number1); /* 讀取輸入的數字 */
+    printf("您輸入了 %f\n", this_is_a_number1);
+
+    // 提示用戶輸入另一個數字
+    printf("請輸入另一個數字：\n");
+    scanf("%f", &amp;this_is_a_number2); /* 讀取輸入的數字 */
+    printf("您輸入了 %f\n", this_is_a_number2);
+
+    // 計算兩個數字的商
+    total = this_is_a_number1 / this_is_a_number2;
+
+    // 輸出商
+    printf("商為 %f\n", total);
+
+    return 0;
+}
+</pre>
+<p><img alt="" height="246" src="/images/螢幕擷取畫面 2023-12-21 042710.png" width="400"/></p>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">#include &lt;stdio.h&gt;
+int main()
+{
+int a = 1;
+int A = 8;
+int b = 2, c;
+c = A - a + b;
+/* 輸出 a, A, b, c 到螢幕 */
+printf( "a = %d, A = %d, b = %d, c = %d ", a, A, b, c );
+return 0;
+}</pre>
+<p><img alt="" height="269" src="/images/螢幕擷取畫面 2023-12-21 042849.png" width="400"/></p>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">#include &lt;stdio.h&gt;
+int main()
+{
+char x, y;
+x = 'a';
+y = (char)97;
+/* 輸出 x, y, x, 最後一個是以 ASCII 值顯示 y */
+printf( " x = %c, y = %c, ASCII of y = %d", x, y, y );
+return 0;
+}</pre>
+<p><img alt="" height="80" src="/images/螢幕擷取畫面 2023-12-21 043041.png" width="400"/></p>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">#include &lt;stdio.h&gt;
+
+int main() {
+    int a = 64;     // 十進制表示法
+    int b = 0x40;   // 十六進制表示法
+    long c = 64L;   // 使用 L 表示長整數
+
+    // 使用 printf 函數輸出變數的值
+    printf("%d, %d, %ld", a, b, c);
+
+    return 0;
+}
+</pre>
+<p><img alt="" height="118" src="/images/螢幕擷取畫面 2023-12-21 043147.png" width="400"/></p>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">#include &lt;stdio.h&gt;
+
+int main() {
+    int i;
+
+    // 提示用戶輸入一個整數
+    printf("請輸入一個整數：");
+
+    // 使用 scanf 函數讀取用戶輸入的整數並將其存儲到變數 i 中
+    scanf("%d", &amp;i);
+
+    // 使用 printf 函數輸出變數 i 的值
+    printf("輸入的數字是：%d", i);
+
+    return 0;
+}
+</pre>
+<p><img alt="" height="115" src="/images/螢幕擷取畫面 2023-12-21 043240.png" width="400"/></p>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">#include&lt;stdio.h&gt;
+
+int main() {
+    int a, b;
+    a = 10;
+    b = 3;
+
+    // 乘法
+    printf("%d \n", a * b);
+
+    // 除法
+    printf("%d \n", a / b);
+
+    // 加法
+    printf("%d \n", a + b);
+
+    // 減法
+    printf("%d \n", a - b);
+
+    // 取餘運算
+    printf("%d \n", a % b);
+
+    return 0;
+}</pre>
+<p><img caption="false" height="267" src="/images/螢幕擷取畫面 2023-12-21 043316.png" width="400"/></p>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">#include &lt;stdio.h&gt;
+
+int main() {
+    int a = 10, b = 5;
+
+    // 比較運算符的使用
+    printf(" a == b is %d \n", a == b);   // 等於
+    printf(" a &gt; b is %d \n", a &gt; b);     // 大於
+    printf(" a &lt; b is %d \n", a &lt; b);     // 小於
+    printf(" a &gt;= b is %d \n", a &gt;= b);   // 大於等於
+    printf(" a &lt;= b is %d \n", a &lt;= b);   // 小於等於
+    printf(" a != b is %d \n", a != b);   // 不等於
+    printf("\n");
+
+    // 修改 b 的值
+    b = 10;
+
+    // 再次進行比較
+    printf(" a == b is %d \n", a == b);
+    printf(" a &gt; b is %d \n", a &gt; b);
+    printf(" a &lt; b is %d \n", a &lt; b);
+    printf(" a &gt;= b is %d \n", a &gt;= b);
+    printf(" a &lt;= b is %d \n", a &lt;= b);
+    printf(" a != b is %d \n", a != b);
+
+    return 0;
+}
+</pre>
+<p><img alt="" height="554" src="/images/螢幕擷取畫面 2023-12-21 043401.png" width="400"/></p>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">#include&lt;stdio.h&gt;
+
+void main() {
+    int a, b;
+    a = 15;
+    b = 1;
+
+    // 位元 OR 運算 (a OR b)
+    printf("%d \n", a | b);
+
+    // 位元 AND 運算 (a AND b)
+    printf("%d \n", a &amp; b);
+
+    // 位元 XOR 運算 (a XOR b)
+    printf("%d \n", a ^ b);
+
+    // 位元左移 1 位 (a 左移 1 位)
+    printf("%d \n", a &lt;&lt; 1);
+
+    // 位元右移 1 位 (a 右移 1 位)
+    printf("%d \n", a &gt;&gt; 1);
+
+    // a 的補數運算 (~a)
+    printf("%d \n", ~a);
+}
+</pre>
+<p><img alt="" height="278" src="/images/螢幕擷取畫面 2023-12-21 043423.png" width="400"/></p>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">#include &lt;stdio.h&gt;
+
+void main() {
+    int a;
+
+    // 將 a 設為 3，然後對其進行邏輯 NOT 運算
+    a = 3;
+    printf("%d\n", !a);  // 非（NOT）運算，輸出 0
+
+    // 將 a 設為 0，然後對其進行邏輯 NOT 運算
+    a = 0;
+    printf("%d\n", !a);  // 非（NOT）運算，輸出 1
+}
+</pre>
+<p><img alt="" height="139" src="/images/螢幕擷取畫面 2023-12-21 043442.png" width="400"/></p>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">#include &lt;stdio.h&gt;
+
+void main() {
+    // 1 AND 3，兩個運算元都為真，結果為真（1）
+    printf("%d\n", 1 &amp;&amp; 3);
+
+    // 0 AND 0，其中一個運算元為假，結果為假（0）
+    printf("%d\n", 0 &amp;&amp; 0);
+
+    // 2 AND 2，兩個運算元都為真，結果為真（1）
+    printf("%d\n", 2 &amp;&amp; 2);
+}
+</pre>
+<p><img alt="" height="177" src="/images/螢幕擷取畫面 2023-12-21 043507.png" width="400"/></p><h1>Brython</h1>
 <p><a href="https://en.wikipedia.org/wiki/Python_(programming_language)">https://en.wikipedia.org/wiki/Python_(programming_language)</a></p>
 <h4>Examples:</h4>
 <p style="padding-left: 30px;"><a href="https://gist.github.com/mdecycu/d9082d678096bd58378d6afe2c7fa05d">https://gist.github.com/mdecycu/d9082d678096bd58378d6afe2c7fa05d</a></p>

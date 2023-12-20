@@ -1,32 +1,36 @@
 #define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
-/* This code demonstrates what a function does */
-/* The function here compares two numbers and says which is bigger */
-/* The user enters three numbers and gets told which is bigger than which !*/
- void myfunction(int a,int b); /* decaration of your function and its
-parameters */
- int first , second, third;
-main()
-{
- printf( "Please enter first integer number: " );
- scanf( "%d", &first );
- printf( "Please enter second integer number: " );
- scanf( "%d", &second );
- printf( "Please enter third integer number: " );
- scanf( "%d", &third );
- myfunction(first , second);
- myfunction(first , third);
- myfunction(second , third);
+
+/* 函數聲明 */
+void myfunction(int a, int b);
+
+int first, second, third;
+
+int main() {
+    printf("請輸入第一個整數：");
+    scanf("%d", &first);
+
+    printf("請輸入第二個整數：");
+    scanf("%d", &second);
+
+    printf("請輸入第三個整數：");
+    scanf("%d", &third);
+
+    // 調用函數比較三對整數
+    myfunction(first, second);
+    myfunction(first, third);
+    myfunction(second, third);
+
+    return 0;
 }
-void myfunction(int a,int b)
-/* the function is outside the main{} part of the program */
-/* The function just compares the two parameters, a and b, and says which
-is greater*/
-{
- if(a>b)
- printf("%d is greater than %d\n", a,b);
- else if (a<b)
- printf("%d is greater than %d\n", b,a);
- else
- printf("%d and %d are equal\n", a,b);
+
+/* 函數實現 */
+void myfunction(int a, int b) {
+    // 比較兩個參數，輸出結果
+    if (a > b)
+        printf("%d 大於 %d\n", a, b);
+    else if (a < b)
+        printf("%d 大於 %d\n", b, a);
+    else
+        printf("%d 和 %d 相等\n", a, b);
 }
