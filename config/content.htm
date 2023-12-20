@@ -971,7 +971,232 @@ int main() {
     return 0;
 }</pre>
 <p><img alt="" height="200" src="/images/motion_plot.png" width="400"/></p>
-<h1>Brython</h1>
+<h1>ANSIC</h1>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">#include &lt;stdio.h&gt;     // 包含標準輸入/輸出頭文件。
+
+float temp_f;     /* 華氏度數 */
+float temp_c;     /* 攝氏度數 */
+char line_text[50];        /* 一行輸入 */
+
+int main() {
+    printf("輸入溫度（攝氏度）：");  // 提示用戶輸入攝氏溫度。
+    fgets(line_text, sizeof(line_text), stdin);      // 從用戶讀取一行輸入，並將其存儲在 'line_text' 中。
+    sscanf(line_text, "%f", &amp;temp_c);               // 將 'line_text' 中的輸入轉換為浮點數，並將其存儲在 'temp_c' 中。
+
+    temp_f = ((9.0 / 5.0) * temp_c) + 32.0;         // 將溫度從攝氏轉換為華氏，並將其存儲在 'temp_f' 中。
+    printf("%f 度華氏。\n", temp_f);    // 以華氏度打印溫度。
+
+    return 0;   // 返回0以指示程序成功執行。
+}
+</pre>
+<p><img alt="" height="225" src="/images/螢幕擷取畫面 2023-12-21 014400.png" width="400"/></p>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">#include &lt;stdio.h&gt;     // 包含標準輸入/輸出頭文件。
+
+float myradius;          /* 球體的半徑 */
+float myvolume;          /* 球體的體積（待計算） */
+char line_text[50];      /* 來自鍵盤的一行輸入 */
+
+/* 從維基百科獲取的π值，精確到小數點後50位 */
+const float PI = 3.6939937510;
+
+int main() {
+    printf("輸入球體的半徑：");  // 提示用戶輸入球體的半徑。
+    fgets(line_text, sizeof(line_text), stdin);   // 從用戶讀取一行輸入，並將其存儲在 'line_text' 中。
+    sscanf(line_text, "%f", &amp;myradius);           // 將 'line_text' 中的輸入轉換為浮點數，並將其存儲在 'myradius' 中。
+
+    myvolume = (4.0 / 3.0) * PI * (myradius * myradius * myradius);  /* 使用體積計算公式計算球體的體積。 */
+    printf("球體的體積是 %f。\n", myvolume);  // 打印計算出的球體的體積。
+
+    return 0;   // 返回0以指示程序成功執行。
+}
+</pre>
+<p><img alt="" height="225" src="/images/螢幕擷取畫面 2023-12-21 015230.png" width="400"/></p>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">#include &lt;stdio.h&gt;     // 包含標準輸入/輸出頭文件。
+int main() {
+    float rec_width;         /* 宣告變量 'rec_width' 來存儲矩形的寬度 */
+    float rec_height;        /* 宣告變量 'rec_height' 來存儲矩形的高度 */
+    float rec_perimeter;     /* 宣告變量 'rec_perimeter' 來存儲周長（待計算） */
+
+    // 提示用戶輸入矩形的高度。
+    printf("輸入矩形的高度：");
+    scanf("%f", &amp;rec_height);  // 從用戶讀取 'rec_height' 的值。
+
+    // 提示用戶輸入矩形的寬度。
+    printf("輸入矩形的寬度：");
+    scanf("%f", &amp;rec_width);  // 從用戶讀取 'rec_width' 的值。
+
+    // 使用公式計算矩形的周長：周長 = 2 * (寬度 + 高度)
+    rec_perimeter = 2.0 * (rec_height + rec_width);
+
+    // 打印計算出的矩形的周長。
+    printf("矩形的周長是：%f\n", rec_perimeter);
+
+    return 0;  // 表示程序成功執行。
+}
+</pre>
+<p><img alt="" height="225" src="/images/螢幕擷取畫面 2023-12-21 015746.png" width="400"/></p>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">#include &lt;stdio.h&gt;     // 包含標準輸入/輸出頭文件。
+
+float kmph;              /* 每小時公里數 */
+float miph;              /* 每小時英里數（待計算） */
+char  line_text[50];      /* 來自鍵盤的一行輸入 */
+
+int main()
+{
+    printf("輸入每小時公里數：");   // 提示用戶輸入每小時公里數。
+    fgets(line_text, sizeof(line_text), stdin);   // 從用戶讀取一行輸入，並將其存儲在 'line_text' 中。
+    sscanf(line_text, "%f", &amp;kmph);   // 將輸入轉換為浮點數，並將其存儲在 'kmph' 中。
+
+    miph = (kmph * 0.6213712);   // 將每小時公里數轉換為每小時英里數。
+    printf("%f 英里每小時\n", miph);   // 以英里每小時的單位打印結果。
+
+    return 0;   // 返回0以指示程序成功執行。
+}
+</pre>
+<p><img alt="" height="225" src="/images/螢幕擷取畫面 2023-12-21 020442.png" width="400"/></p>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">#include &lt;stdio.h&gt;     // 包含標準輸入/輸出頭文件。
+
+int tot_mins;  /* 指定的總分鐘數 */
+int hrs;          /* 小時數（待計算） */
+int mins;        /* 分鐘數（待計算） */
+
+const int MINaHOUR = 60;      /* 一小時的分鐘數 */
+
+char line_text[50];      /* 來自鍵盤的一行輸入 */
+
+int main() {
+    printf("輸入總分鐘數：");   // 提示用戶輸入總分鐘數。
+    fgets(line_text, sizeof(line_text), stdin);   // 從用戶讀取一行輸入，並將其存儲在 'line_text' 中。
+    sscanf(line_text, "%d", &amp;tot_mins);   // 將輸入轉換為整數，並將其存儲在 'tot_mins' 中。
+
+    hrs = (tot_mins / MINaHOUR);   // 計算小時數。
+    mins = (tot_mins % MINaHOUR);   // 計算剩餘分鐘數。
+
+    printf("%d 小時，%d 分鐘。\n", hrs, mins);   // 打印計算出的小時數和分鐘數。
+
+    return 0;   // 返回0以指示程序成功執行。
+}
+</pre>
+<p><img alt="" height="225" src="/images/螢幕擷取畫面 2023-12-21 020836.png" width="400"/></p>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">#include &lt;stdio.h&gt;     // 包含標準輸入/輸出頭文件。
+
+int hrs;          /* 指定的小時數 */
+int mins;         /* 指定的分鐘數 */
+int tot_mins;     /* 總分鐘數（待計算） */
+
+const int MINaHOUR = 60;      /* 一小時的分鐘數 */
+
+char line_text[50];      /* 來自鍵盤的一行輸入 */
+
+int main() {
+    printf("輸入小時數：");   // 提示用戶輸入小時數。
+    fgets(line_text, sizeof(line_text), stdin);   // 從用戶讀取一行輸入，並將其存儲在 'line_text' 中。
+    sscanf(line_text, "%d", &amp;hrs);   // 將輸入轉換為整數，並將其存儲在 'hrs' 中。
+
+    printf("輸入分鐘數：");   // 提示用戶輸入分鐘數。
+    fgets(line_text, sizeof(line_text), stdin);   // 從用戶讀取一行輸入，並將其存儲在 'line_text' 中。
+    sscanf(line_text, "%d", &amp;mins);   // 將輸入轉換為整數，並將其存儲在 'mins' 中。
+
+    tot_mins = mins + (hrs * MINaHOUR);   // 計算總分鐘數。
+
+    printf("總共：%d 分鐘。\n", tot_mins);   // 打印總分鐘數。
+
+    return 0;   // 返回0以指示程序成功執行。
+}
+</pre>
+<p><img alt="" height="225" src="/images/螢幕擷取畫面 2023-12-21 021231.png" width="400"/></p>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">#include &lt;stdio.h&gt;    // 包含標準輸入/輸出頭文件。
+
+int main() {
+    char firstname[20], lastname[20];   // 声明字符數組來存儲名字和姓氏，每個數組的最大大小為20個字符。
+    int bir_year;   // 声明一個整數變量 'bir_year' 來存儲出生年份。
+
+    printf("輸入您的名字：");   // 提示用戶輸入他們的名字。
+    scanf("%s", firstname);   // 讀取並存儲用戶的輸入在 'firstname' 中。
+
+    printf("輸入您的姓氏：");   // 提示用戶輸入他們的姓氏。
+    scanf("%s", lastname);   // 讀取並存儲用戶的輸入在 'lastname' 中。
+
+    printf("輸入您的出生年份：");   // 提示用戶輸入他們的出生年份。
+    scanf("%d", &amp;bir_year);   // 讀取並存儲用戶的輸入在 'bir_year' 中。
+
+    printf("%s %s %d\n", firstname, lastname, bir_year);   // 打印名字、姓氏和出生年份。
+
+    return 0;   // 返回0以表示程序成功執行。
+}
+</pre>
+<p><img alt="" height="225" src="/images/螢幕擷取畫面 2023-12-21 021538.png" width="400"/></p>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">#include &lt;stdio.h&gt;     // 包含標準輸入/輸出頭文件。
+
+int num1, num2, num3;   /* 宣告三個變數 */
+int sum;                /* 用於存儲數字總和的變數 */
+char line_text[50];     /* 來自鍵盤的一行輸入 */ 
+
+int main() 
+{  
+    printf("輸入三個以逗號分隔的數字：");   // 提示用戶輸入三個以逗號分隔的數字。
+    fgets(line_text, sizeof(line_text), stdin);   // 從用戶讀取一行輸入，並將其存儲在 'line_text' 中。
+    sscanf(line_text, "%d, %d, %d", &amp;num1, &amp;num2, &amp;num3);   // 將輸入轉換為整數，並分別存儲在 'num1'、'num2' 和 'num3' 中。
+    sum = num1 + num2 + num3;   // 計算這三個數字的總和。
+    printf("三個數字的總和：%d\n", sum);   // 打印這三個數字的總和。  
+    return 0;   // 返回0以表示程序成功執行。  
+}  
+</pre>
+<p><img alt="" height="225" src="/images/螢幕擷取畫面 2023-12-21 021803.png" width="400"/></p>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">#include &lt;stdio.h&gt;    // 包含標準輸入/輸出頭文件。
+
+int main()  
+{  
+    int num1, num2;   // 宣告兩個整數變數 'num1' 和 'num2'。
+    int sum, sub, mult, mod;   // 宣告變數來存儲算術運算的結果。
+    float div;   // 宣告一個浮點變數 'div' 來存儲除法的結果。
+
+    /* 
+     * 從用戶讀取兩個以逗號分隔的數字 
+     */  
+    printf("輸入任意兩個以逗號分隔的數字：");   // 提示用戶輸入兩個以逗號分隔的數字。
+    scanf("%d,%d", &amp;num1, &amp;num2);   // 讀取並存儲用戶的輸入在 'num1' 和 'num2' 中。
+
+    /* 
+     * 執行所有算術運算 
+     */   
+    sum = num1 + num2;   // 計算 'num1' 和 'num2' 的和。
+    sub = num1 - num2;   // 計算 'num1' 和 'num2' 的差。
+    mult = num1 * num2;  // 計算 'num1' 和 'num2' 的積。
+    div = (float)num1 / num2;   // 計算 'num1' 除以 'num2' 的商，並將結果轉換為浮點數。
+    mod = num1 % num2;   // 計算 'num1' 和 'num2' 的餘數。
+
+    /* 
+     * 打印所有算術運算的結果 
+     */  
+    printf("給定數字的和：%d\n", sum);   // 打印和。
+    printf("給定數字的差：%d\n", sub);   // 打印差。
+    printf("給定數字的積：%d\n", mult);   // 打印積。
+    printf("給定數字的商：%f\n", div);   // 打印商。
+    printf("餘數 = %d\n", mod);   // 打印餘數。
+
+    return 0;   // 返回0以表示程序成功執行。   
+}
+</pre>
+<p><img alt="" height="225" src="/images/螢幕擷取畫面 2023-12-21 022031.png" width="400"/></p>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">#include &lt;stdio.h&gt;
+
+int main()  
+{  
+    int ang1, ang2, ang3; /* 定義三角形的三個角度  */
+
+    /* 從用戶讀取三角形的兩個角度，以逗號分隔*/  
+    printf("輸入三角形的兩個角度，以逗號分隔：");  
+    scanf("%d, %d", &amp;ang1, &amp;ang2);  
+
+    ang3 = 180 - (ang1 + ang2);  /* 計算第三個角度  */
+
+    printf("三角形的第三個角度為：%d\n", ang3);  
+
+    return 0;  
+}  
+</pre>
+<p><img alt="" height="225" src="/images/螢幕擷取畫面 2023-12-21 022031.png" width="400"/></p><h1>Brython</h1>
 <p><a href="https://en.wikipedia.org/wiki/Python_(programming_language)">https://en.wikipedia.org/wiki/Python_(programming_language)</a></p>
 <h4>Examples:</h4>
 <p style="padding-left: 30px;"><a href="https://gist.github.com/mdecycu/d9082d678096bd58378d6afe2c7fa05d">https://gist.github.com/mdecycu/d9082d678096bd58378d6afe2c7fa05d</a></p>
