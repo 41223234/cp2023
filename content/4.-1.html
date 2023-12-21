@@ -131,7 +131,7 @@ img.add_border {
                             <li><a href="./../blog/index.html">blog</a></li>
                         </ul>
                       </li>
-                     <li><a href='About.html'>About</a><li><a href='5w.html'>5w</a><li><a href='6w.html'>6w</a><li><a href='7w.html'>7w</a><li><a href='12w.html'>12w</a><li><a href='13w.html'>13w</a><li><a href='ANSIC.html'>ANSIC</a><li class='has-children'><a href='C.EX1.html'>C.EX1</a><ul class='dropdown'><li><a href='1..html'>1.</a><li><a href='2..html'>2.</a><li><a href='3..html'>3.</a><li><a href='4..html'>4.</a><li><a href='5..html'>5.</a><li><a href='6..html'>6.</a><li><a href='7..html'>7.</a><li><a href='8..html'>8.</a><li><a href='9..html'>9.</a><li><a href='10..html'>10.</a></li></ul><li><a href='C.EX2.html'>C.EX2</a><li><a href='Brython.html'>Brython</a></li>
+                     <li><a href='About.html'>About</a><li><a href='5w.html'>5w</a><li><a href='6w.html'>6w</a><li><a href='7w.html'>7w</a><li><a href='12w.html'>12w</a><li><a href='13w.html'>13w</a><li><a href='ANSIC.html'>ANSIC</a><li class='has-children'><a href='C.EX1.html'>C.EX1</a><ul class='dropdown'><li><a href='1.-1.html'>1.-1</a><li><a href='2.-1.html'>2.-1</a><li><a href='3.-1.html'>3.-1</a><li><a href='4.-1.html'>4.-1</a><li><a href='5.-1.html'>5.-1</a><li><a href='6.-1.html'>6.-1</a><li><a href='7.-1.html'>7.-1</a><li><a href='8.-1.html'>8.-1</a><li><a href='9.-1.html'>9.-1</a><li><a href='10.-1.html'>10.-1</a></li></ul><li class='has-children'><a href='C.EX2.html'>C.EX2</a><ul class='dropdown'><li><a href='1.-2.html'>1.-2</a><li><a href='2.-2.html'>2.-2</a><li><a href='3.-2.html'>3.-2</a><li><a href='4.-2.html'>4.-2</a><li><a href='5.-2.html'>5.-2</a><li><a href='6.-2.html'>6.-2</a><li><a href='7.-2.html'>7.-2</a><li><a href='8.-2.html'>8.-2</a><li><a href='9.-2.html'>9.-2</a><li><a href='10.-2.html'>10.-2</a></li></ul><li><a href='Brython.html'>Brython</a></li>
                       </ul>
                 </nav>
               </div>
@@ -142,50 +142,52 @@ img.add_border {
           </div>
           
         </header>
-    <div id="tipue_search_content">8. << <a href='8..html'>Previous</a> <a href='10..html'>Next</a> >> 10.<br /><h1>9.</h1>
+    <div id="tipue_search_content">3.-1 << <a href='3.-1.html'>Previous</a> <a href='5.-1.html'>Next</a> >> 5.-1<br /><h1>4.-1</h1>
 <pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">#define _CRT_SECURE_NO_WARNINGS
-#include &lt;stdio.h&gt;
+#include&lt;stdio.h&gt;
 
-/* 這段代碼演示了一個函數的作用 */
-/* 這個函數比較兩個數字的大小 */
-/* 用戶輸入三個數字，並得知它們的大小關係 */
-
-void myfunction(int a, int b); /* 函數的聲明和其參數 */
-
-int first, second, third;
-
+/* 2D數組示例 */
 int main()
 {
-    printf("請輸入第一個整數：");
-    scanf("%d", &amp;first);
+    int arr1[7][8]; /* 2D數組 */
+    int i, j, k, l;
 
-    printf("請輸入第二個整數：");
-    scanf("%d", &amp;second);
+    printf("輸入行和列的數量（最多7行，最多8列） \n");
+    scanf("%d %d", &amp;k, &amp;l);
 
-    printf("請輸入第三個整數：");
-    scanf("%d", &amp;third);
+    if (k &gt; 7 || l &gt; 8)
+    {
+        printf("錯誤 - 行的最大值為8，列的最大值為7 \n");
+    }
+    else
+    {
+        printf("輸入數組元素\n");
 
-    myfunction(first, second);
-    myfunction(first, third);
-    myfunction(second, third);
+        for (i = 0; i &lt; k; i++)
+        {
+            for (j = 0; j &lt; l; j++)
+            {
+                scanf("%d", &amp;arr1[i][j]);
+            }
+        }
+
+        printf("你的數組是 \n");
+
+        for (i = 0; i &lt; k; i++)
+        {
+            for (j = 0; j &lt; l; j++)
+            {
+                printf("%d ", arr1[i][j]);
+            }
+            printf("\n");
+        }
+    }
 
     return 0;
 }
-
-void myfunction(int a, int b)
-{
-    /* 這個函數位於程序的 main{} 部分之外 */
-    /* 這個函數僅比較兩個參數 a 和 b，並說明哪個更大 */
-    if (a &gt; b)
-        printf("%d 大於 %d\n", a, b);
-    else if (a &lt; b)
-        printf("%d 大於 %d\n", b, a);
-    else
-        printf("%d 和 %d 相等\n", a, b);
-}
 </pre>
-<p><img alt="" height="274" src="./../images/螢幕擷取畫面 2023-12-21 045857.png" width="400"/></p>
-<br />8. << <a href='8..html'>Previous</a> <a href='10..html'>Next</a> >> 10.</div>
+<p><img alt="" height="243" src="./../images/螢幕擷取畫面 2023-12-21 045311.png" width="400"/></p>
+<br />3.-1 << <a href='3.-1.html'>Previous</a> <a href='5.-1.html'>Next</a> >> 5.-1</div>
         
     <!-- footer -->
       <div class="container">
