@@ -2,7 +2,7 @@
         <head>
         <title>cmsite</title>
         <meta charset="utf-8">
-<meta property="head" content="H1">
+<meta property="head" content="H2">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700,900" rel="stylesheet">
         <link rel="stylesheet" href="./../cmsimde/static/chimper/fonts/icomoon/style.css">
@@ -142,8 +142,50 @@ img.add_border {
           </div>
           
         </header>
-    <div id="tipue_search_content">ANSIC << <a href='ANSIC.html'>Previous</a> <a href='1..html'>Next</a> >> 1.<br /><h1>C.EX1</h1>
-<br />ANSIC << <a href='ANSIC.html'>Previous</a> <a href='1..html'>Next</a> >> 1.</div>
+    <div id="tipue_search_content">8. << <a href='8..html'>Previous</a> <a href='10..html'>Next</a> >> 10.<br /><h1>9.</h1>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">#define _CRT_SECURE_NO_WARNINGS
+#include &lt;stdio.h&gt;
+
+/* 這段代碼演示了一個函數的作用 */
+/* 這個函數比較兩個數字的大小 */
+/* 用戶輸入三個數字，並得知它們的大小關係 */
+
+void myfunction(int a, int b); /* 函數的聲明和其參數 */
+
+int first, second, third;
+
+int main()
+{
+    printf("請輸入第一個整數：");
+    scanf("%d", &amp;first);
+
+    printf("請輸入第二個整數：");
+    scanf("%d", &amp;second);
+
+    printf("請輸入第三個整數：");
+    scanf("%d", &amp;third);
+
+    myfunction(first, second);
+    myfunction(first, third);
+    myfunction(second, third);
+
+    return 0;
+}
+
+void myfunction(int a, int b)
+{
+    /* 這個函數位於程序的 main{} 部分之外 */
+    /* 這個函數僅比較兩個參數 a 和 b，並說明哪個更大 */
+    if (a &gt; b)
+        printf("%d 大於 %d\n", a, b);
+    else if (a &lt; b)
+        printf("%d 大於 %d\n", b, a);
+    else
+        printf("%d 和 %d 相等\n", a, b);
+}
+</pre>
+<p><img alt="" height="274" src="./../images/螢幕擷取畫面 2023-12-21 045857.png" width="400"/></p>
+<br />8. << <a href='8..html'>Previous</a> <a href='10..html'>Next</a> >> 10.</div>
         
     <!-- footer -->
       <div class="container">

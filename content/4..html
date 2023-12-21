@@ -2,7 +2,7 @@
         <head>
         <title>cmsite</title>
         <meta charset="utf-8">
-<meta property="head" content="H1">
+<meta property="head" content="H2">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700,900" rel="stylesheet">
         <link rel="stylesheet" href="./../cmsimde/static/chimper/fonts/icomoon/style.css">
@@ -142,8 +142,52 @@ img.add_border {
           </div>
           
         </header>
-    <div id="tipue_search_content">ANSIC << <a href='ANSIC.html'>Previous</a> <a href='1..html'>Next</a> >> 1.<br /><h1>C.EX1</h1>
-<br />ANSIC << <a href='ANSIC.html'>Previous</a> <a href='1..html'>Next</a> >> 1.</div>
+    <div id="tipue_search_content">3. << <a href='3..html'>Previous</a> <a href='5..html'>Next</a> >> 5.<br /><h1>4.</h1>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">#define _CRT_SECURE_NO_WARNINGS
+#include&lt;stdio.h&gt;
+
+/* 2D數組示例 */
+int main()
+{
+    int arr1[7][8]; /* 2D數組 */
+    int i, j, k, l;
+
+    printf("輸入行和列的數量（最多7行，最多8列） \n");
+    scanf("%d %d", &amp;k, &amp;l);
+
+    if (k &gt; 7 || l &gt; 8)
+    {
+        printf("錯誤 - 行的最大值為8，列的最大值為7 \n");
+    }
+    else
+    {
+        printf("輸入數組元素\n");
+
+        for (i = 0; i &lt; k; i++)
+        {
+            for (j = 0; j &lt; l; j++)
+            {
+                scanf("%d", &amp;arr1[i][j]);
+            }
+        }
+
+        printf("你的數組是 \n");
+
+        for (i = 0; i &lt; k; i++)
+        {
+            for (j = 0; j &lt; l; j++)
+            {
+                printf("%d ", arr1[i][j]);
+            }
+            printf("\n");
+        }
+    }
+
+    return 0;
+}
+</pre>
+<p><img alt="" height="243" src="./../images/螢幕擷取畫面 2023-12-21 045311.png" width="400"/></p>
+<br />3. << <a href='3..html'>Previous</a> <a href='5..html'>Next</a> >> 5.</div>
         
     <!-- footer -->
       <div class="container">
