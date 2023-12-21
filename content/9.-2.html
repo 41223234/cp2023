@@ -131,7 +131,7 @@ img.add_border {
                             <li><a href="./../blog/index.html">blog</a></li>
                         </ul>
                       </li>
-                     <li><a href='About.html'>About</a><li><a href='5w.html'>5w</a><li><a href='6w.html'>6w</a><li><a href='7w.html'>7w</a><li><a href='12w.html'>12w</a><li><a href='13w.html'>13w</a><li><a href='ANSIC.html'>ANSIC</a><li class='has-children'><a href='C.EX1.html'>C.EX1</a><ul class='dropdown'><li><a href='1.-1.html'>1.-1</a><li><a href='2.-1.html'>2.-1</a><li><a href='3.-1.html'>3.-1</a><li><a href='4.-1.html'>4.-1</a><li><a href='5.-1.html'>5.-1</a><li><a href='6.-1.html'>6.-1</a><li><a href='7.-1.html'>7.-1</a><li><a href='8.-1.html'>8.-1</a><li><a href='9.-1.html'>9.-1</a><li><a href='10.-1.html'>10.-1</a></li></ul><li class='has-children'><a href='C.EX2.html'>C.EX2</a><ul class='dropdown'><li><a href='1.-2.html'>1.-2</a><li><a href='2.-2.html'>2.-2</a><li><a href='3.-2.html'>3.-2</a><li><a href='4.-2.html'>4.-2</a><li><a href='5.-2.html'>5.-2</a><li><a href='6.-2.html'>6.-2</a><li><a href='7.-2.html'>7.-2</a><li><a href='8.-2.html'>8.-2</a><li><a href='9.-2.html'>9.-2</a><li><a href='10.-2.html'>10.-2</a></li></ul><li><a href='Brython.html'>Brython</a></li>
+                     <li><a href='About.html'>About</a><li><a href='5w.html'>5w</a><li><a href='6w.html'>6w</a><li><a href='7w.html'>7w</a><li><a href='12w.html'>12w</a><li><a href='13w.html'>13w</a><li class='has-children'><a href='ANSI C.html'>ANSI C</a><ul class='dropdown'><li><a href='1.-1.html'>1.-1</a><li><a href='2.-1.html'>2.-1</a><li><a href='3.-1.html'>3.-1</a><li><a href='4.-1.html'>4.-1</a><li><a href='5.-1.html'>5.-1</a><li><a href='6.-1.html'>6.-1</a><li><a href='7.-1.html'>7.-1</a><li><a href='8.-1.html'>8.-1</a><li><a href='9.-1.html'>9.-1</a><li><a href='10.-1.html'>10.-1</a></li></ul><li class='has-children'><a href='C.EX1.html'>C.EX1</a><ul class='dropdown'><li><a href='1.-2.html'>1.-2</a><li><a href='2.-2.html'>2.-2</a><li><a href='3.-2.html'>3.-2</a><li><a href='4.-2.html'>4.-2</a><li><a href='5.-2.html'>5.-2</a><li><a href='6.-2.html'>6.-2</a><li><a href='7.-2.html'>7.-2</a><li><a href='8.-2.html'>8.-2</a><li><a href='9.-2.html'>9.-2</a><li><a href='10.-2.html'>10.-2</a></li></ul><li class='has-children'><a href='C.EX2.html'>C.EX2</a><ul class='dropdown'><li><a href='1.-3.html'>1.-3</a><li><a href='2.-3.html'>2.-3</a><li><a href='3.-3.html'>3.-3</a><li><a href='4.-3.html'>4.-3</a><li><a href='5.-3.html'>5.-3</a><li><a href='6.-3.html'>6.-3</a><li><a href='7.-3.html'>7.-3</a><li><a href='8.-3.html'>8.-3</a><li><a href='9.-3.html'>9.-3</a><li><a href='10.-3.html'>10.-3</a></li></ul><li><a href='Brython.html'>Brython</a></li>
                       </ul>
                 </nav>
               </div>
@@ -143,21 +143,48 @@ img.add_border {
           
         </header>
     <div id="tipue_search_content">8.-2 << <a href='8.-2.html'>Previous</a> <a href='10.-2.html'>Next</a> >> 10.-2<br /><h1>9.-2</h1>
-<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">#include &lt;stdio.h&gt;
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">#define _CRT_SECURE_NO_WARNINGS
+#include &lt;stdio.h&gt;
 
-void main() {
-    int a;
+/* 這段代碼演示了一個函數的作用 */
+/* 這個函數比較兩個數字的大小 */
+/* 用戶輸入三個數字，並得知它們的大小關係 */
 
-    // 將 a 設為 3，然後對其進行邏輯 NOT 運算
-    a = 3;
-    printf("%d\n", !a);  // 非（NOT）運算，輸出 0
+void myfunction(int a, int b); /* 函數的聲明和其參數 */
 
-    // 將 a 設為 0，然後對其進行邏輯 NOT 運算
-    a = 0;
-    printf("%d\n", !a);  // 非（NOT）運算，輸出 1
+int first, second, third;
+
+int main()
+{
+    printf("請輸入第一個整數：");
+    scanf("%d", &amp;first);
+
+    printf("請輸入第二個整數：");
+    scanf("%d", &amp;second);
+
+    printf("請輸入第三個整數：");
+    scanf("%d", &amp;third);
+
+    myfunction(first, second);
+    myfunction(first, third);
+    myfunction(second, third);
+
+    return 0;
+}
+
+void myfunction(int a, int b)
+{
+    /* 這個函數位於程序的 main{} 部分之外 */
+    /* 這個函數僅比較兩個參數 a 和 b，並說明哪個更大 */
+    if (a &gt; b)
+        printf("%d 大於 %d\n", a, b);
+    else if (a &lt; b)
+        printf("%d 大於 %d\n", b, a);
+    else
+        printf("%d 和 %d 相等\n", a, b);
 }
 </pre>
-<p><img alt="" height="139" src="./../images/螢幕擷取畫面 2023-12-21 043442.png" width="400"/></p>
+<p><img alt="" height="274" src="./../images/螢幕擷取畫面 2023-12-21 045857.png" width="400"/></p>
 <br />8.-2 << <a href='8.-2.html'>Previous</a> <a href='10.-2.html'>Next</a> >> 10.-2</div>
         
     <!-- footer -->

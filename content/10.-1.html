@@ -131,7 +131,7 @@ img.add_border {
                             <li><a href="./../blog/index.html">blog</a></li>
                         </ul>
                       </li>
-                     <li><a href='About.html'>About</a><li><a href='5w.html'>5w</a><li><a href='6w.html'>6w</a><li><a href='7w.html'>7w</a><li><a href='12w.html'>12w</a><li><a href='13w.html'>13w</a><li><a href='ANSIC.html'>ANSIC</a><li class='has-children'><a href='C.EX1.html'>C.EX1</a><ul class='dropdown'><li><a href='1.-1.html'>1.-1</a><li><a href='2.-1.html'>2.-1</a><li><a href='3.-1.html'>3.-1</a><li><a href='4.-1.html'>4.-1</a><li><a href='5.-1.html'>5.-1</a><li><a href='6.-1.html'>6.-1</a><li><a href='7.-1.html'>7.-1</a><li><a href='8.-1.html'>8.-1</a><li><a href='9.-1.html'>9.-1</a><li><a href='10.-1.html'>10.-1</a></li></ul><li class='has-children'><a href='C.EX2.html'>C.EX2</a><ul class='dropdown'><li><a href='1.-2.html'>1.-2</a><li><a href='2.-2.html'>2.-2</a><li><a href='3.-2.html'>3.-2</a><li><a href='4.-2.html'>4.-2</a><li><a href='5.-2.html'>5.-2</a><li><a href='6.-2.html'>6.-2</a><li><a href='7.-2.html'>7.-2</a><li><a href='8.-2.html'>8.-2</a><li><a href='9.-2.html'>9.-2</a><li><a href='10.-2.html'>10.-2</a></li></ul><li><a href='Brython.html'>Brython</a></li>
+                     <li><a href='About.html'>About</a><li><a href='5w.html'>5w</a><li><a href='6w.html'>6w</a><li><a href='7w.html'>7w</a><li><a href='12w.html'>12w</a><li><a href='13w.html'>13w</a><li class='has-children'><a href='ANSI C.html'>ANSI C</a><ul class='dropdown'><li><a href='1.-1.html'>1.-1</a><li><a href='2.-1.html'>2.-1</a><li><a href='3.-1.html'>3.-1</a><li><a href='4.-1.html'>4.-1</a><li><a href='5.-1.html'>5.-1</a><li><a href='6.-1.html'>6.-1</a><li><a href='7.-1.html'>7.-1</a><li><a href='8.-1.html'>8.-1</a><li><a href='9.-1.html'>9.-1</a><li><a href='10.-1.html'>10.-1</a></li></ul><li class='has-children'><a href='C.EX1.html'>C.EX1</a><ul class='dropdown'><li><a href='1.-2.html'>1.-2</a><li><a href='2.-2.html'>2.-2</a><li><a href='3.-2.html'>3.-2</a><li><a href='4.-2.html'>4.-2</a><li><a href='5.-2.html'>5.-2</a><li><a href='6.-2.html'>6.-2</a><li><a href='7.-2.html'>7.-2</a><li><a href='8.-2.html'>8.-2</a><li><a href='9.-2.html'>9.-2</a><li><a href='10.-2.html'>10.-2</a></li></ul><li class='has-children'><a href='C.EX2.html'>C.EX2</a><ul class='dropdown'><li><a href='1.-3.html'>1.-3</a><li><a href='2.-3.html'>2.-3</a><li><a href='3.-3.html'>3.-3</a><li><a href='4.-3.html'>4.-3</a><li><a href='5.-3.html'>5.-3</a><li><a href='6.-3.html'>6.-3</a><li><a href='7.-3.html'>7.-3</a><li><a href='8.-3.html'>8.-3</a><li><a href='9.-3.html'>9.-3</a><li><a href='10.-3.html'>10.-3</a></li></ul><li><a href='Brython.html'>Brython</a></li>
                       </ul>
                 </nav>
               </div>
@@ -142,71 +142,25 @@ img.add_border {
           </div>
           
         </header>
-    <div id="tipue_search_content">9.-1 << <a href='9.-1.html'>Previous</a> <a href='C.EX2.html'>Next</a> >> C.EX2<br /><h1>10.-1</h1>
-<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">#define _CRT_SECURE_NO_WARNINGS
-#include&lt;stdio.h&gt;
+    <div id="tipue_search_content">9.-1 << <a href='9.-1.html'>Previous</a> <a href='C.EX1.html'>Next</a> >> C.EX1<br /><h1>10.-1</h1>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">#include &lt;stdio.h&gt;
 
-/* 函數的例子 */
-void printarow(int row, int cols, int arr[8][8]);
+int main()  
+{  
+    int ang1, ang2, ang3; /* 定義三角形的三個角度  */
 
-int main()
-{
-    int arr1[8][8];
-    int i, j, rows, cols;
+    /* 從用戶讀取三角形的兩個角度，以逗號分隔*/  
+    printf("輸入三角形的兩個角度，以逗號分隔：");  
+    scanf("%d, %d", &amp;ang1, &amp;ang2);  
 
-    printf("輸入行數和列數（最多8行最多8列）\n");
-    scanf("%d %d", &amp;rows, &amp;cols);
+    ang3 = 180 - (ang1 + ang2);  /* 計算第三個角度  */
 
-    if (rows &gt; 8 || cols &gt; 8)
-    {
-        printf("錯誤 — 行數最多為8，列數最多為8\n");
-    }
-    else
-    {
-        printf("輸入數組\n");
+    printf("三角形的第三個角度為：%d\n", ang3);  
 
-        for (i = 0; i &lt; rows; i++)
-        {
-            for (j = 0; j &lt; cols; j++)
-            {
-                scanf("%d", &amp;arr1[i][j]);
-            }
-        }
-
-        printf("你的數組是 \n");
-
-        for (i = 0; i &lt; rows; i++)
-        {
-            for (j = 0; j &lt; cols; j++)
-            {
-                printf("%d ", arr1[i][j]);
-            }
-            printf("\n");
-        }
-    }
-
-    printarow(2, cols, arr1); /* 這將調用函數以打印第2行（假設你至少有2行） */
-    printf("\n");
-    printarow(1, cols, arr1); /* 這將調用函數以打印第1行 */
-    printf("\n");
-
-    return 0;
-}
-
-void printarow(int row, int cols, int arr[8][8])
-{
-    /* 這是一個函數，可以從程序的任何地方調用 */
-    /* 可以隨時多次調用 */
-    /* 如果你需要多次執行相同的操作，它可以節省你重復編寫相同代碼的工作 */
-    printf("第 %d 行是 ", row);
-
-    for (int j = 0; j &lt; cols; j++)
-    {
-        printf("%d ", arr[row - 1][j]);
-    }
-}
+    return 0;  
+}  
 </pre>
-<p><img alt="" height="259" src="./../images/螢幕擷取畫面 2023-12-21 050250.png" width="400"/></p><br />9.-1 << <a href='9.-1.html'>Previous</a> <a href='C.EX2.html'>Next</a> >> C.EX2</div>
+<p><img alt="" height="225" src="./../images/螢幕擷取畫面 2023-12-21 022031.png" width="400"/></p><br />9.-1 << <a href='9.-1.html'>Previous</a> <a href='C.EX1.html'>Next</a> >> C.EX1</div>
         
     <!-- footer -->
       <div class="container">

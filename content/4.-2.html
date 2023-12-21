@@ -131,7 +131,7 @@ img.add_border {
                             <li><a href="./../blog/index.html">blog</a></li>
                         </ul>
                       </li>
-                     <li><a href='About.html'>About</a><li><a href='5w.html'>5w</a><li><a href='6w.html'>6w</a><li><a href='7w.html'>7w</a><li><a href='12w.html'>12w</a><li><a href='13w.html'>13w</a><li><a href='ANSIC.html'>ANSIC</a><li class='has-children'><a href='C.EX1.html'>C.EX1</a><ul class='dropdown'><li><a href='1.-1.html'>1.-1</a><li><a href='2.-1.html'>2.-1</a><li><a href='3.-1.html'>3.-1</a><li><a href='4.-1.html'>4.-1</a><li><a href='5.-1.html'>5.-1</a><li><a href='6.-1.html'>6.-1</a><li><a href='7.-1.html'>7.-1</a><li><a href='8.-1.html'>8.-1</a><li><a href='9.-1.html'>9.-1</a><li><a href='10.-1.html'>10.-1</a></li></ul><li class='has-children'><a href='C.EX2.html'>C.EX2</a><ul class='dropdown'><li><a href='1.-2.html'>1.-2</a><li><a href='2.-2.html'>2.-2</a><li><a href='3.-2.html'>3.-2</a><li><a href='4.-2.html'>4.-2</a><li><a href='5.-2.html'>5.-2</a><li><a href='6.-2.html'>6.-2</a><li><a href='7.-2.html'>7.-2</a><li><a href='8.-2.html'>8.-2</a><li><a href='9.-2.html'>9.-2</a><li><a href='10.-2.html'>10.-2</a></li></ul><li><a href='Brython.html'>Brython</a></li>
+                     <li><a href='About.html'>About</a><li><a href='5w.html'>5w</a><li><a href='6w.html'>6w</a><li><a href='7w.html'>7w</a><li><a href='12w.html'>12w</a><li><a href='13w.html'>13w</a><li class='has-children'><a href='ANSI C.html'>ANSI C</a><ul class='dropdown'><li><a href='1.-1.html'>1.-1</a><li><a href='2.-1.html'>2.-1</a><li><a href='3.-1.html'>3.-1</a><li><a href='4.-1.html'>4.-1</a><li><a href='5.-1.html'>5.-1</a><li><a href='6.-1.html'>6.-1</a><li><a href='7.-1.html'>7.-1</a><li><a href='8.-1.html'>8.-1</a><li><a href='9.-1.html'>9.-1</a><li><a href='10.-1.html'>10.-1</a></li></ul><li class='has-children'><a href='C.EX1.html'>C.EX1</a><ul class='dropdown'><li><a href='1.-2.html'>1.-2</a><li><a href='2.-2.html'>2.-2</a><li><a href='3.-2.html'>3.-2</a><li><a href='4.-2.html'>4.-2</a><li><a href='5.-2.html'>5.-2</a><li><a href='6.-2.html'>6.-2</a><li><a href='7.-2.html'>7.-2</a><li><a href='8.-2.html'>8.-2</a><li><a href='9.-2.html'>9.-2</a><li><a href='10.-2.html'>10.-2</a></li></ul><li class='has-children'><a href='C.EX2.html'>C.EX2</a><ul class='dropdown'><li><a href='1.-3.html'>1.-3</a><li><a href='2.-3.html'>2.-3</a><li><a href='3.-3.html'>3.-3</a><li><a href='4.-3.html'>4.-3</a><li><a href='5.-3.html'>5.-3</a><li><a href='6.-3.html'>6.-3</a><li><a href='7.-3.html'>7.-3</a><li><a href='8.-3.html'>8.-3</a><li><a href='9.-3.html'>9.-3</a><li><a href='10.-3.html'>10.-3</a></li></ul><li><a href='Brython.html'>Brython</a></li>
                       </ul>
                 </nav>
               </div>
@@ -143,20 +143,50 @@ img.add_border {
           
         </header>
     <div id="tipue_search_content">3.-2 << <a href='3.-2.html'>Previous</a> <a href='5.-2.html'>Next</a> >> 5.-2<br /><h1>4.-2</h1>
-<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">#include &lt;stdio.h&gt;
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">#define _CRT_SECURE_NO_WARNINGS
+#include&lt;stdio.h&gt;
 
-int main() {
-    int a = 64;     // 十進制表示法
-    int b = 0x40;   // 十六進制表示法
-    long c = 64L;   // 使用 L 表示長整數
+/* 2D數組示例 */
+int main()
+{
+    int arr1[7][8]; /* 2D數組 */
+    int i, j, k, l;
 
-    // 使用 printf 函數輸出變數的值
-    printf("%d, %d, %ld", a, b, c);
+    printf("輸入行和列的數量（最多7行，最多8列） \n");
+    scanf("%d %d", &amp;k, &amp;l);
+
+    if (k &gt; 7 || l &gt; 8)
+    {
+        printf("錯誤 - 行的最大值為8，列的最大值為7 \n");
+    }
+    else
+    {
+        printf("輸入數組元素\n");
+
+        for (i = 0; i &lt; k; i++)
+        {
+            for (j = 0; j &lt; l; j++)
+            {
+                scanf("%d", &amp;arr1[i][j]);
+            }
+        }
+
+        printf("你的數組是 \n");
+
+        for (i = 0; i &lt; k; i++)
+        {
+            for (j = 0; j &lt; l; j++)
+            {
+                printf("%d ", arr1[i][j]);
+            }
+            printf("\n");
+        }
+    }
 
     return 0;
 }
 </pre>
-<p><img alt="" height="118" src="./../images/螢幕擷取畫面 2023-12-21 043147.png" width="400"/></p>
+<p><img alt="" height="243" src="./../images/螢幕擷取畫面 2023-12-21 045311.png" width="400"/></p>
 <br />3.-2 << <a href='3.-2.html'>Previous</a> <a href='5.-2.html'>Next</a> >> 5.-2</div>
         
     <!-- footer -->

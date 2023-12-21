@@ -131,7 +131,7 @@ img.add_border {
                             <li><a href="./../blog/index.html">blog</a></li>
                         </ul>
                       </li>
-                     <li><a href='About.html'>About</a><li><a href='5w.html'>5w</a><li><a href='6w.html'>6w</a><li><a href='7w.html'>7w</a><li><a href='12w.html'>12w</a><li><a href='13w.html'>13w</a><li><a href='ANSIC.html'>ANSIC</a><li class='has-children'><a href='C.EX1.html'>C.EX1</a><ul class='dropdown'><li><a href='1.-1.html'>1.-1</a><li><a href='2.-1.html'>2.-1</a><li><a href='3.-1.html'>3.-1</a><li><a href='4.-1.html'>4.-1</a><li><a href='5.-1.html'>5.-1</a><li><a href='6.-1.html'>6.-1</a><li><a href='7.-1.html'>7.-1</a><li><a href='8.-1.html'>8.-1</a><li><a href='9.-1.html'>9.-1</a><li><a href='10.-1.html'>10.-1</a></li></ul><li class='has-children'><a href='C.EX2.html'>C.EX2</a><ul class='dropdown'><li><a href='1.-2.html'>1.-2</a><li><a href='2.-2.html'>2.-2</a><li><a href='3.-2.html'>3.-2</a><li><a href='4.-2.html'>4.-2</a><li><a href='5.-2.html'>5.-2</a><li><a href='6.-2.html'>6.-2</a><li><a href='7.-2.html'>7.-2</a><li><a href='8.-2.html'>8.-2</a><li><a href='9.-2.html'>9.-2</a><li><a href='10.-2.html'>10.-2</a></li></ul><li><a href='Brython.html'>Brython</a></li>
+                     <li><a href='About.html'>About</a><li><a href='5w.html'>5w</a><li><a href='6w.html'>6w</a><li><a href='7w.html'>7w</a><li><a href='12w.html'>12w</a><li><a href='13w.html'>13w</a><li class='has-children'><a href='ANSI C.html'>ANSI C</a><ul class='dropdown'><li><a href='1.-1.html'>1.-1</a><li><a href='2.-1.html'>2.-1</a><li><a href='3.-1.html'>3.-1</a><li><a href='4.-1.html'>4.-1</a><li><a href='5.-1.html'>5.-1</a><li><a href='6.-1.html'>6.-1</a><li><a href='7.-1.html'>7.-1</a><li><a href='8.-1.html'>8.-1</a><li><a href='9.-1.html'>9.-1</a><li><a href='10.-1.html'>10.-1</a></li></ul><li class='has-children'><a href='C.EX1.html'>C.EX1</a><ul class='dropdown'><li><a href='1.-2.html'>1.-2</a><li><a href='2.-2.html'>2.-2</a><li><a href='3.-2.html'>3.-2</a><li><a href='4.-2.html'>4.-2</a><li><a href='5.-2.html'>5.-2</a><li><a href='6.-2.html'>6.-2</a><li><a href='7.-2.html'>7.-2</a><li><a href='8.-2.html'>8.-2</a><li><a href='9.-2.html'>9.-2</a><li><a href='10.-2.html'>10.-2</a></li></ul><li class='has-children'><a href='C.EX2.html'>C.EX2</a><ul class='dropdown'><li><a href='1.-3.html'>1.-3</a><li><a href='2.-3.html'>2.-3</a><li><a href='3.-3.html'>3.-3</a><li><a href='4.-3.html'>4.-3</a><li><a href='5.-3.html'>5.-3</a><li><a href='6.-3.html'>6.-3</a><li><a href='7.-3.html'>7.-3</a><li><a href='8.-3.html'>8.-3</a><li><a href='9.-3.html'>9.-3</a><li><a href='10.-3.html'>10.-3</a></li></ul><li><a href='Brython.html'>Brython</a></li>
                       </ul>
                 </nav>
               </div>
@@ -143,27 +143,27 @@ img.add_border {
           
         </header>
     <div id="tipue_search_content">1.-1 << <a href='1.-1.html'>Previous</a> <a href='3.-1.html'>Next</a> >> 3.-1<br /><h1>2.-1</h1>
-<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">#define _CRT_SECURE_NO_WARNINGS  // 用於禁用scanf的安全性警告
-#include&lt;stdio.h&gt;
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">#include &lt;stdio.h&gt;     // 包含標準輸入/輸出頭文件。
 
-int main()
-{
-    int this_is_a_number1, this_is_a_number2, total;
-    printf("請輸入一個整數：\n ");
-    scanf("%d", &amp;this_is_a_number1);  // 讀取輸入的數字
-    printf("你輸入了 %d\n", this_is_a_number1);
-    
-    printf("請輸入另一個整數：\n");
-    scanf("%d", &amp;this_is_a_number2);  // 讀取輸入的數字
-    printf("你輸入了 %d\n", this_is_a_number2);
-    
-    total = this_is_a_number1 + this_is_a_number2;  // 將兩個數字相加
-    printf("總和為 %d\n", total);
-    
-    return 0;
+float myradius;          /* 球體的半徑 */
+float myvolume;          /* 球體的體積（待計算） */
+char line_text[50];      /* 來自鍵盤的一行輸入 */
+
+/* 從維基百科獲取的π值，精確到小數點後50位 */
+const float PI = 3.6939937510;
+
+int main() {
+    printf("輸入球體的半徑：");  // 提示用戶輸入球體的半徑。
+    fgets(line_text, sizeof(line_text), stdin);   // 從用戶讀取一行輸入，並將其存儲在 'line_text' 中。
+    sscanf(line_text, "%f", &amp;myradius);           // 將 'line_text' 中的輸入轉換為浮點數，並將其存儲在 'myradius' 中。
+
+    myvolume = (4.0 / 3.0) * PI * (myradius * myradius * myradius);  /* 使用體積計算公式計算球體的體積。 */
+    printf("球體的體積是 %f。\n", myvolume);  // 打印計算出的球體的體積。
+
+    return 0;   // 返回0以指示程序成功執行。
 }
 </pre>
-<p><img alt="" height="261" src="./../images/螢幕擷取畫面 2023-12-21 045200.png" width="400"/></p>
+<p><img alt="" height="225" src="./../images/螢幕擷取畫面 2023-12-21 015230.png" width="400"/></p>
 <br />1.-1 << <a href='1.-1.html'>Previous</a> <a href='3.-1.html'>Next</a> >> 3.-1</div>
         
     <!-- footer -->
